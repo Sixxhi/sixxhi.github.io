@@ -35,8 +35,6 @@
     padding: 48px 54px 56px;
     box-shadow: 0 8px 48px rgba(0,0,0,0.14), 0 1px 4px rgba(0,0,0,0.06);
   }
-
-  /* HEADER */
   .header { margin-bottom: 22px; }
   .header-top {
     display: flex;
@@ -85,8 +83,6 @@
     margin-left: 8px;
     vertical-align: middle;
   }
-
-  /* SUMMARY */
   .summary {
     font-size: 12.5px;
     color: var(--ink2);
@@ -98,13 +94,9 @@
     margin-bottom: 24px;
   }
   .summary b { font-weight: 600; color: var(--navy); }
-
-  /* TWO COLUMN */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
   .col-left { min-width: 0; }
   .col-right { min-width: 0; }
-
-  /* SECTION */
   .section { margin-bottom: 20px; }
   .section-title {
     font-size: 10px;
@@ -118,14 +110,10 @@
     text-align: left;
     opacity: 0.85;
   }
-
-  /* SKILLS */
   .skill-row { display: flex; gap: 5px; font-size: 12px; margin-bottom: 4px; line-height: 1.5; }
-  .skill-label { font-weight: 600; color: var(--navy); min-width: 115px; flex-shrink: 0; font-size: 11px; }
+  .skill-label { font-weight: 600; color: var(--navy); min-width: 125px; flex-shrink: 0; font-size: 11px; }
   .skill-val { color: var(--ink2); font-weight: 300; }
   .skill-val b { font-weight: 500; color: var(--ink); }
-
-  /* JOBS */
   .job { margin-bottom: 14px; }
   .job:last-child { margin-bottom: 0; }
   .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; margin-bottom: 1px; text-align: left; }
@@ -146,40 +134,27 @@
   .bullets li::before { content: '·'; position: absolute; left: 3px; color: var(--gold); font-size: 14px; line-height: 1.3; font-weight: 700; }
   .bullets li b { font-weight: 500; color: var(--ink); }
   .bullets li .metric { font-weight: 600; color: var(--navy); }
-
-  /* PROJECTS */
   .project { margin-bottom: 13px; }
   .project:last-child { margin-bottom: 0; }
   .project-name { font-weight: 600; font-size: 12.5px; color: var(--ink); margin-bottom: 1px; text-align: left; }
   .project-name .award { color: var(--gold); font-size: 11.5px; font-weight: 600; }
   .project-tech { font-size: 11px; color: var(--muted); font-style: italic; margin-bottom: 3px; text-align: left; }
-
-  /* EDUCATION */
   .edu-school { font-weight: 600; font-size: 12.5px; color: var(--ink); }
   .edu-meta { font-size: 12px; color: var(--ink2); font-weight: 300; margin-top: 2px; }
   .edu-meta b { font-weight: 600; color: var(--navy); }
   .edu-sub { font-size: 11.5px; color: var(--muted); font-weight: 300; margin-top: 1px; }
   .edu-sub b { font-weight: 500; color: var(--ink2); }
-
-  /* CERTS */
   .cert-item { font-size: 12px; font-weight: 300; color: var(--ink2); margin-bottom: 4px; padding-left: 13px; position: relative; line-height: 1.5; }
   .cert-item::before { content: '·'; position: absolute; left: 3px; color: var(--gold); font-size: 14px; line-height: 1.3; font-weight: 700; }
   .cert-item strong { font-weight: 600; color: var(--navy); }
-
-  /* LEADERSHIP */
   .lead-item { font-size: 12px; font-weight: 300; color: var(--ink2); margin-bottom: 4px; padding-left: 13px; position: relative; line-height: 1.5; }
   .lead-item::before { content: '·'; position: absolute; left: 3px; color: var(--gold); font-size: 14px; line-height: 1.3; font-weight: 700; }
   .lead-item strong { font-weight: 600; color: var(--ink); }
   .lead-item .metric { font-weight: 600; color: var(--navy); }
-
-  /* HONORS */
   .honors-wrap { display: flex; flex-wrap: wrap; gap: 5px; text-align: left; }
   .honor { background: var(--tag); color: var(--navy); font-size: 11px; font-weight: 400; padding: 3px 8px; border-radius: 2px; border: 1px solid #d4dae6; }
   .honor.gold { background: var(--gold-light); border-color: #d4a85a; color: #7a5200; font-weight: 600; }
-
-  /* DIVIDER */
   .full-rule { border: none; border-top: 1px solid var(--rule); margin: 20px 0; }
-
   @media print {
     body { background: white; }
     .page { margin: 0; box-shadow: none; max-width: 100%; padding: 32px 40px; }
@@ -194,13 +169,13 @@
     <div class="header-top">
       <div>
         <h1>Siddhi Prajapati</h1>
-        <div class="tagline" style="margin-top:6px;">Software Engineering &nbsp;|&nbsp; Applied AI &amp; Machine Learning &nbsp;|&nbsp; Backend Systems &nbsp;|&nbsp; Full-Stack &nbsp;| Cloud &amp; Data Infrastructure</div>
+        <div class="tagline" style="margin-top:6px;">Software Engineering &nbsp;|&nbsp; Applied AI &amp; Machine Learning &nbsp;|&nbsp; Backend Systems &nbsp;|&nbsp; Full-Stack &nbsp;|&nbsp; Cloud &amp; Data Infrastructure</div>
         <div class="edu-line" style="margin-top:4px;">University of California, Irvine &nbsp;|&nbsp; B.S. Computer Science, Minor in Statistics &nbsp;|&nbsp; Expected June 2028</div>
       </div>
       <div class="contact-block">
         <div>Irvine, CA</div>
         <div>siddhi2277@gmail.com</div>
-                <div><a href="https://www.linkedin.com/in/siddhi-prajapati-127483268/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/Sixxhi" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="https://sixxhi.github.io" target="_blank">sixxhi.github.io</a></div>
+        <div><a href="https://www.linkedin.com/in/siddhi-prajapati-127483268/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/Sixxhi" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="https://sixxhi.github.io" target="_blank">sixxhi.github.io</a></div>
         <div style="margin-top:4px;"><span class="cpt-badge">CPT / F-1 Eligible</span></div>
       </div>
     </div>
@@ -208,7 +183,7 @@
 
   <!-- SUMMARY -->
   <div class="summary">
-    UCI CS student (<b>GPA 3.6, Dean's Honor List ×4</b>) actively building AI, backend, and full-stack systems across research and industry. Currently developing <b>AI-assisted VR training systems</b> as an undergraduate researcher at <b>UCI Calit2 SMART ITAC</b>. <b>AWS Cloud Hacks 2026 AI Safety Track winner.</b> Brings experience across the full stack, from NLP pipelines and cloud integrations to systems-level C++ and database-backed applications. Eligible for internships via CPT authorization.
+    UCI CS Junior (<b>GPA 3.6, Dean's Honor List ×4</b>) actively building AI, backend, and full-stack systems across research and industry. <b>AWS Cloud Hacks 2026 AI Safety Track winner (GlassBoxAI)</b> and <b>UC Berkeley AI Hackathon 2026 participant (IMMUNE)</b>. Undergraduate researcher at <b>UCI Calit2 SMART ITAC</b>. Experience across full stack: NLP pipelines, agentic AI systems, cloud infrastructure, and database-backed applications. CPT/F-1 eligible — no employer sponsorship needed.
   </div>
 
   <!-- SKILLS -->
@@ -216,12 +191,12 @@
     <div class="section-title">Technical Skills</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 32px;">
       <div class="skill-row"><span class="skill-label">Languages</span><span class="skill-val"><b>Python, Java, C, C++</b>, SQL, JavaScript, HTML/CSS</span></div>
-      <div class="skill-row"><span class="skill-label">Cloud &amp; Platforms</span><span class="skill-val"><b>AWS Lambda, Amazon Bedrock, Vertex AI</b>, IBM Watson Studio</span></div>
+      <div class="skill-row"><span class="skill-label">Cloud &amp; Platforms</span><span class="skill-val"><b>AWS Lambda, Amazon Bedrock, Anthropic Claude API</b>, Vertex AI, IBM Watson Studio</span></div>
       <div class="skill-row"><span class="skill-label">Frameworks &amp; Backend</span><span class="skill-val"><b>Node.js, Express.js, Flask, React</b>, REST APIs</span></div>
-      <div class="skill-row"><span class="skill-label">Developer Tools</span><span class="skill-val"><b>Git, GitHub, Docker</b>, CMake, GoogleTest, Figma, Three.js, Cursor, GitHub Copilot</span></div>
+      <div class="skill-row"><span class="skill-label">Developer Tools</span><span class="skill-val"><b>Git, GitHub, Docker, GitHub Actions</b>, CMake, GoogleTest, Figma, Three.js, Cursor, GitHub Copilot</span></div>
       <div class="skill-row"><span class="skill-label">Databases</span><span class="skill-val"><b>MongoDB, PostgreSQL</b>, SQLite</span></div>
-      <div class="skill-row"><span class="skill-label">Familiarity</span><span class="skill-val">GitLab CI/CD, Jenkins, Snyk, Dynatrace</span></div>
-      <div class="skill-row" style="grid-column:1/-1"><span class="skill-label">AI / ML</span><span class="skill-val"><b>scikit-learn, NumPy, Pandas, OpenCV</b>, TF-IDF, Logistic Regression, Decision Trees, ROC-AUC, stratified cross-validation</span></div>
+      <div class="skill-row"><span class="skill-label">Familiarity</span><span class="skill-val">GitLab CI/CD, Jenkins, Salesforce CI/CD, Snyk, Dynatrace</span></div>
+      <div class="skill-row" style="grid-column:1/-1"><span class="skill-label">AI / ML</span><span class="skill-val"><b>scikit-learn, NumPy, Pandas, OpenCV</b>, TF-IDF, Logistic Regression, Decision Trees, ROC-AUC, stratified cross-validation, <b>Redis RediSearch, LangGraph, FastMCP, Arize Phoenix, OpenTelemetry, Sentry</b></span></div>
     </div>
   </div>
 
@@ -229,7 +204,7 @@
 
   <div class="two-col">
 
-    <!-- LEFT -->
+    <!-- LEFT COLUMN -->
     <div class="col-left">
       <div class="section">
         <div class="section-title">Experience</div>
@@ -241,10 +216,9 @@
           </div>
           <div class="job-org">UCI Calit2 SMART ITAC, University of California Irvine</div>
           <ul class="bullets">
-            <li>Developing <b>VR training simulations</b> in SimInsights HyperSkill for building energy assessments and data-center cooling efficiency; designing end-to-end scenario flows covering mechanical equipment, sensor systems, and operational procedures.</li>
+            <li>Developing <b>VR training simulations</b> in SimInsights HyperSkill for building energy assessments and data center cooling efficiency; designing end-to-end scenario flows covering mechanical equipment, sensor systems, and operational procedures.</li>
             <li>Developing reasoning workflows for an <b>AI training agent</b> leveraging the ITAC database, ASHRAE guidelines, California building codes, and ISO standards to deliver contextualized simulation feedback.</li>
-            <li>Collaborate with faculty researchers and industry partners to improve simulation accuracy, learner interaction workflows, and operational realism.</li>
-            <li>Build modular <b>backend workflows</b> supporting AI evaluation, observability, and simulation-feedback pipelines.</li>
+            <li>Build and maintain modular <b>backend pipelines</b> supporting AI agent evaluation, observability, and real-time simulation-feedback workflows.</li>
           </ul>
         </div>
 
@@ -255,8 +229,8 @@
           </div>
           <div class="job-org">3E Worldwide / CHARUSAT</div>
           <ul class="bullets">
-            <li>Developed an end-to-end <b>ML pipeline</b> to classify real and fake news using TF-IDF feature extraction, n-gram modeling, Logistic Regression, and Decision Tree classifiers; best-performing model achieved <span class="metric">~91% classification accuracy</span>.</li>
-            <li>Evaluated model reliability using <b>F1, precision-recall, ROC-AUC</b>, and stratified 5-fold cross-validation; recommended data leakage checks and robustness-testing protocols to improve result trustworthiness.</li>
+            <li>Built an end-to-end <b>NLP classification pipeline</b> in Python using TF-IDF feature extraction, n-gram modeling, Logistic Regression, and Decision Tree classifiers with scikit-learn; best-performing model achieved <span class="metric">~91% accuracy on a 10,000+ article dataset</span>.</li>
+            <li>Evaluated model reliability using <b>F1, precision-recall, ROC-AUC</b>, and stratified 5-fold cross-validation; identified and flagged a data leakage risk in the original train/test split that had inflated accuracy metrics.</li>
             <li>Documented methodology, experiments, model comparisons, and insights in a <b>research-style paper and report</b>.</li>
           </ul>
         </div>
@@ -268,7 +242,7 @@
           </div>
           <div class="job-org">dg8ly, The School of Digital Mastery</div>
           <ul class="bullets">
-            <li>Built Student Records, Bank Management, and Library Management systems in <b>C/C++ and Java</b>, applying OOP, file handling, modular design, and debugging under a structured programming curriculum.</li>
+            <li>Built Student Records, Bank Management, and Library Management systems in <b>C/C++ and Java</b>, applying OOP, file handling, and modular design.</li>
           </ul>
         </div>
 
@@ -312,8 +286,8 @@
         <div class="section-title">Education</div>
         <div class="edu-school">University of California, Irvine — Donald Bren School of ICS</div>
         <div class="edu-meta">B.S. Computer Science, Minor in Statistics &nbsp;·&nbsp; <b>GPA: 3.6 / 4.0</b> &nbsp;·&nbsp; Expected June 2028</div>
-        <div class="edu-sub" style="margin-top:3px;"><b>Dean's Honor List:</b> Fall 2024 · Winter 2025 · Spring 2025 · Winter 2026</div>
-        <div class="edu-sub">Coursework: Data Structures &amp; Algorithms, OOP, Systems Programming (C/C++), Linear Algebra, Discrete Math, Statistics, UX Design</div>
+        <div class="edu-sub" style="margin-top:3px;"><b>Dean's Honor List:</b> Fall 2024 · Winter 2025 · Winter 2026 · Spring 2026</div>
+        <div class="edu-sub">Coursework: Artificial Intelligence (A), Information Retrieval (A+), Design &amp; Analysis of Algorithms (B+), Data Structures (A-), Systems Programming C/C++, Linear Algebra (A+), Discrete Math (A), Statistics (A-)</div>
       </div>
 
       <!-- CERTIFICATIONS -->
@@ -321,12 +295,13 @@
         <div class="section-title">Certifications</div>
         <div class="cert-item"><strong>IBM edX</strong> — Mastering Generative AI for Software Development · Mar 2026 · AI-assisted SDLC, Dockerfile generation; applied through CodeCraftHub.</div>
         <div class="cert-item"><strong>Node.js Certification</strong> — Scaler Topics · May 2026 · 58 modules: Express.js, async JS, MongoDB/Mongoose, REST API with full CRUD.</div>
+        <div class="cert-item"><strong>CI/CD for Salesforce</strong> — DevOps Launchpad (Official Certification) · Jul 2026 · CI/CD automation, release pipelines, and continuous delivery for Salesforce DevOps ecosystems.</div>
         <div class="cert-item"><strong>Harvard CS50x</strong> — Introduction to Computer Science · HarvardX / edX (Verified) · C, Python, SQL, JavaScript.</div>
         <div class="cert-item"><strong>UX Design Fundamentals</strong> — Georgia Tech · <strong>OOP in Java</strong> — Georgia Tech / Coursera · Both Verified.</div>
       </div>
     </div>
 
-    <!-- RIGHT -->
+    <!-- RIGHT COLUMN -->
     <div class="col-right">
       <div class="section">
         <div class="section-title">Projects</div>
@@ -335,9 +310,19 @@
           <div class="project-name">GlassBoxAI — Agentic AI Safety Observability Platform &nbsp;<span class="award">🏆 Winner · AI Safety Track, AWS Cloud Hacks 2026</span></div>
           <div class="project-tech">AWS Lambda · Amazon Bedrock · Three.js · Figma</div>
           <ul class="bullets">
-            <li>Built a <b>real-time AI safety observability platform</b> for a Smart Stadium Simulator monitoring agent reasoning, safety scores, tool-call traces, and critical alerts across live system events.</li>
+            <li>Built a <b>real-time AI safety observability platform</b> for a Smart Stadium Simulator end-to-end in 24 hours — monitored agent reasoning traces, safety scores, and tool-call sequences; <span class="metric">detected 100% of injected high-risk scenarios with zero false negatives</span> during live judging.</li>
             <li>Designed the full <b>dark-mode UI in Figma</b>, implemented an interactive <b>Three.js globe/stadium visualization</b>, and configured AWS Lambda + Bedrock integrations for agent reasoning and safety evaluation pipelines.</li>
-            <li>Implemented monitoring logic to detect high-risk agent behaviors: <b>energy overloads, public safety violations</b>, sensor-failure loops, and repeated tool-call patterns.</li>
+            <li>Caught a critical <b>Amazon Bedrock API parsing bug</b> during integration testing — Copilot-generated code assumed flat JSON when Bedrock nests output inside a content array; identified by testing Lambda functions against live endpoints before demo.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-name">IMMUNE — AI Agent Memory Integrity System &nbsp;<span style="font-weight:300;font-size:11.5px;color:var(--muted);">UC Berkeley AI Hackathon 2026, Participant</span></div>
+          <div class="project-tech">Python · Redis RediSearch · Anthropic Claude Haiku 4.5 · LangGraph · FastMCP · Arize Phoenix · OpenTelemetry · Sentry</div>
+          <ul class="bullets">
+            <li>Built a <b>deterministic AI agent memory integrity system</b> addressing OWASP ASI06 memory poisoning — proves which memory caused a wrong answer through counterfactual replay and delta debugging with <b>no LLM judge</b> in the attribution loop.</li>
+            <li>Enforced quarantine at <b>Redis KNN vector index level</b> using RediSearch FLAT index and cosine distance — poisoned memories physically cannot be retrieved; implemented adaptive group testing and <b>ddmin delta debugging</b> to find the minimal guilty memory set.</li>
+            <li>Integrated <b>Arize Phoenix and OpenTelemetry</b> for full trace visibility, Sentry for incident reporting, and LangGraph BaseStore adapter for agent memory; <span class="metric">44 tests</span> across single-poison, redundant-poison, and staleness-rot scenarios.</li>
           </ul>
         </div>
 
@@ -345,7 +330,7 @@
           <div class="project-name">Forager — Sustainable AI Fashion Assistant &nbsp;<span style="font-weight:300;font-size:11.5px;color:var(--muted);">Irvine Hacks 2025</span></div>
           <div class="project-tech">Vertex AI · Flask · React · Depop API</div>
           <ul class="bullets">
-            <li>Built a full-stack <b>AI fashion assistant</b> that analyzes outfit images with <b>Vertex AI vision models</b> and recommends second-hand alternatives via the Depop API; designed, integrated, and deployed within 24 hours.</li>
+            <li>Built a full-stack <b>AI fashion assistant</b> that analyzes outfit images with <b>Vertex AI vision models</b> and recommends second-hand alternatives via the Depop API; designed, integrated, and deployed end-to-end within 24 hours.</li>
           </ul>
         </div>
 
@@ -353,7 +338,7 @@
           <div class="project-name">CodeCraftHub — AI-Augmented Developer Learning Platform</div>
           <div class="project-tech">Node.js · Express.js · MongoDB · Docker · Generative AI</div>
           <ul class="bullets">
-            <li>Designed modular <b>REST APIs and backend services</b> using Node.js, Express.js, and MongoDB; <b>Dockerized deployment</b> with GitHub CI workflow and generative AI tooling across the full SDLC. IBM edX capstone.</li>
+            <li>Designed modular <b>REST APIs and backend services</b> using Node.js, Express.js, and MongoDB; <b>Dockerized deployment</b> with GitHub CI/CD workflow and generative AI tooling across the full SDLC. IBM edX capstone.</li>
           </ul>
         </div>
 
@@ -361,7 +346,7 @@
           <div class="project-name">Python Systems Projects · UC Irvine</div>
           <div class="project-tech">Python · SQLite · Tkinter · Event-Driven Architecture</div>
           <ul class="bullets">
-            <li><b>Discrete-event alert propagation simulator</b>, SQLite-backed airport database engine with Tkinter GUI and parameterized CRUD, and a <b>Grin language interpreter</b> with label resolution, branching, and call-stack execution.</li>
+            <li>Built a <b>discrete-event alert propagation simulator</b>, SQLite-backed airport database engine with Tkinter GUI and parameterized CRUD, and a <b>Grin language interpreter</b> with label resolution, branching, and call-stack execution.</li>
           </ul>
         </div>
 
@@ -395,13 +380,15 @@
       <div class="section">
         <div class="section-title">Honors &amp; Awards</div>
         <div class="honors-wrap">
-          <span class="honor gold">🏆 AWS Cloud Hacks 2026 — AI Safety Track</span>
+          <span class="honor gold">🏆 AWS Cloud Hacks 2026 — AI Safety Track Winner</span>
+          <span class="honor">UC Berkeley AI Hackathon 2026 Participant — IMMUNE</span>
           <span class="honor">17th Sheikh Zayed Memorial Education Award</span>
           <span class="honor">CBSE UAE Sahodaya Math Excellence</span>
           <span class="honor">Top 5 · Emirates Aviation Water Rocket</span>
           <span class="honor">Guinness World Record Contributor — Largest Water Safety Lesson, DCT Abu Dhabi</span>
         </div>
       </div>
+
     </div>
   </div>
 
