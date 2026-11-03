@@ -3,369 +3,529 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siddhi Prajapati | Software Engineer Portfolio</title>
-<meta name="description" content="Siddhi Prajapati, UC Irvine CS senior (Intelligent Systems, GPA 3.663). Software engineering and AI/ML portfolio: AWS Cloud Hacks 2026 AI Safety winner, IMMUNE, ZotStudy. Available Summer 2027 (CPT) and full-time January 2028 (OPT).">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Siddhi Prajapati | Software Engineer</title>
+<meta name="description" content="Siddhi Prajapati, UC Irvine CS senior building reliable AI agent systems, backend services and full-stack products. AWS Cloud Hacks 2026 AI Safety Track winner. Available Summer 2027 (CPT) and full-time January 2028 (OPT).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1a3a5c;
-    --navy-light: #1e4a7a;
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --surface-2: #f0eee7;
+    --ink: #111418;
+    --ink-2: #3a3f47;
+    --muted: #6b7079;
+    --line: #e4e1d8;
+    --navy: #16324f;
+    --accent: #2f6fdb;
+    --accent-soft: #e7efff;
     --gold: #b8842a;
-    --gold-light: #f5efe6;
-    --teal: #0d7377;
-    --bg: #faf9f7;
-    --bg2: #f0ede8;
-    --ink: #0d0f14;
-    --ink2: #1e2028;
-    --muted: #6b7280;
-    --rule: #e5e7eb;
-    --tag: #eef1f6;
-    --page: 940px;
-    --metric: #1a3a5c;
+    --gold-soft: #f7efdf;
+    --green: #1f8a5b;
+    --shadow: 0 1px 2px rgba(17,20,24,.04), 0 8px 24px rgba(17,20,24,.06);
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1116; --surface: #151a21; --surface-2: #1b2129; --ink: #eef1f5; --ink-2: #c3c9d2;
+      --muted: #8b939e; --line: #262d37; --navy: #9cc2ff; --accent: #6ea2ff; --accent-soft: #17243a;
+      --gold: #e2b25a; --gold-soft: #2a2215; --green: #4cc38a; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1116; --surface: #151a21; --surface-2: #1b2129; --ink: #eef1f5; --ink-2: #c3c9d2;
+    --muted: #8b939e; --line: #262d37; --navy: #9cc2ff; --accent: #6ea2ff; --accent-soft: #17243a;
+    --gold: #e2b25a; --gold-soft: #2a2215; --green: #4cc38a; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #d8d4cb; font-family: 'DM Sans', sans-serif; font-size: 13px; line-height: 1.6; color: var(--ink2); -webkit-font-smoothing: antialiased; }
-  .page { background: var(--bg); max-width: var(--page); margin: 28px auto; box-shadow: 0 8px 48px rgba(0,0,0,0.14); }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink-2); font-family: 'Inter', system-ui, sans-serif; font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
-  /* HEADER */
-  .header { background: var(--navy); padding: 48px 54px 42px; position: relative; overflow: hidden; }
-  .header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 320px; height: 320px; border: 1px solid rgba(255,255,255,0.06); border-radius: 50%; }
-  .header::after { content: ''; position: absolute; top: -20px; right: -20px; width: 200px; height: 200px; border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; }
-  h1 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: #fff; letter-spacing: -0.5px; margin-bottom: 6px; }
-  .tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
-  .contact { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; }
-  .contact a { color: rgba(255,255,255,0.75); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 1px; }
-  .contact a:hover { color: #fff; border-color: #fff; }
-  .badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-top: 14px; }
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 18px; color: var(--ink); }
+  .brand span { color: var(--gold); }
+  .nav-links { display: flex; gap: 22px; font-size: 13.5px; font-weight: 500; }
+  .nav-links a { color: var(--ink-2); }
+  .nav-links a:hover { color: var(--accent); text-decoration: none; }
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .theme-btn { background: var(--surface); border: 1px solid var(--line); color: var(--ink-2); border-radius: 8px; width: 34px; height: 34px; cursor: pointer; font-size: 17px; line-height: 1; }
 
-  /* SUMMARY */
-  .summary-wrap { padding: 28px 54px; border-bottom: 1.5px solid var(--rule); background: var(--gold-light); }
-  .summary { font-size: 13px; font-weight: 300; color: var(--ink2); line-height: 1.75; border-left: 3px solid var(--gold); padding-left: 16px; }
-  .summary b { font-weight: 600; color: var(--navy); }
+  /* BUTTONS */
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); transition: transform .15s, box-shadow .15s; }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  :root[data-theme="dark"] .btn.primary { color: #0e1116; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.primary { color: #0e1116; } }
+  .btn.sm { padding: 7px 13px; font-size: 13px; }
 
-  /* TWO COL LAYOUT */
-  .body { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-  .col { padding: 32px 40px; }
-  .col:first-child { border-right: 1.5px solid var(--rule); }
+  /* HERO */
+  .hero { padding: 72px 0 48px; }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: center; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-2); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px color-mix(in srgb, var(--green) 20%, transparent); }
+  h1 { font-family: 'Fraunces', serif; font-size: 56px; line-height: 1.05; color: var(--ink); margin: 18px 0 12px; letter-spacing: -1px; }
+  .role { font-size: 18px; color: var(--ink-2); font-weight: 500; }
+  .lede { margin-top: 16px; max-width: 580px; color: var(--muted); font-size: 16px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .award-card { background: linear-gradient(135deg, var(--gold-soft), var(--surface)); border: 1px solid color-mix(in srgb, var(--gold) 35%, var(--line)); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+  .award-card .k { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+  .award-card h3 { font-family: 'Fraunces', serif; color: var(--ink); font-size: 22px; line-height: 1.2; margin: 8px 0 8px; }
+  .award-card p { font-size: 14px; color: var(--ink-2); }
+  .meta-list { margin-top: 14px; display: grid; gap: 6px; font-size: 13.5px; }
+  .meta-list div { display: flex; gap: 8px; }
+  .meta-list b { color: var(--ink); font-weight: 600; min-width: 92px; }
 
-  /* SECTION */
-  .sec { margin-bottom: 28px; }
-  .sec-title { font-size: 9.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy); padding-bottom: 6px; border-bottom: 2px solid var(--navy); margin-bottom: 16px; opacity: 0.9; }
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 40px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .stat .n { font-family: 'Fraunces', serif; font-size: 26px; color: var(--navy); font-weight: 700; line-height: 1.1; }
+  .stat .l { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
 
-  /* JOB */
-  .job { margin-bottom: 18px; }
-  .job:last-child { margin-bottom: 0; }
-  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 2px; }
-  .job-title { font-weight: 600; font-size: 12.5px; color: var(--ink); flex: 1; }
-  .job-date { font-size: 11px; color: var(--muted); white-space: nowrap; font-weight: 300; }
-  .job-org { font-size: 11.5px; color: var(--muted); font-style: italic; margin-bottom: 6px; }
-  .bullets { padding-left: 0; }
-  .bullets li { list-style: none; position: relative; padding-left: 14px; margin-bottom: 4px; font-size: 12px; font-weight: 300; color: var(--ink2); line-height: 1.55; }
-  .bullets li::before { content: '·'; position: absolute; left: 3px; color: var(--gold); font-size: 15px; line-height: 1.2; font-weight: 700; }
-  .bullets li b { font-weight: 500; color: var(--ink); }
-  .metric { font-weight: 600; color: var(--metric); }
+  /* SECTIONS */
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 26px; flex-wrap: wrap; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  h2 { font-family: 'Fraunces', serif; font-size: 32px; color: var(--ink); letter-spacing: -.5px; }
 
-  /* PROJECT */
-  .project { margin-bottom: 16px; }
-  .project:last-child { margin-bottom: 0; }
-  .proj-name { font-weight: 600; font-size: 12.5px; color: var(--ink); margin-bottom: 2px; }
-  .proj-name .award { color: var(--gold); font-size: 11.5px; }
-  .proj-name .participant { color: var(--muted); font-size: 11px; font-weight: 400; }
-  .proj-tech { font-size: 11px; color: var(--muted); font-style: italic; margin-bottom: 5px; }
+  /* PROJECTS */
+  .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+  .card.feature-wide { grid-column: span 2; }
+  .card.feature { grid-column: span 2; display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; }
+  .card-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .tag { font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+  .tag.gold { background: var(--gold-soft); color: var(--gold); }
+  .card h3 { font-family: 'Fraunces', serif; font-size: 22px; color: var(--ink); line-height: 1.25; margin: 4px 0 6px; }
+  .card .sub { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+  .card ul { list-style: none; display: grid; gap: 8px; }
+  .card li { position: relative; padding-left: 18px; font-size: 14px; }
+  .card li::before { content: ''; position: absolute; left: 2px; top: 10px; width: 6px; height: 6px; border-radius: 2px; background: var(--gold); }
+  .card li b { color: var(--ink); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .chip { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; padding: 4px 9px; border-radius: 6px; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line); }
+  .links { display: flex; gap: 14px; margin-top: auto; padding-top: 16px; font-size: 13.5px; font-weight: 600; }
+  .callout { background: var(--surface-2); border-radius: 12px; padding: 18px; border: 1px solid var(--line); }
+  .callout .k { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .callout .big { font-family: 'Fraunces', serif; font-size: 40px; color: var(--navy); font-weight: 700; line-height: 1.1; margin: 6px 0 4px; }
+  .callout p { font-size: 13.5px; }
+  .callout + .callout { margin-top: 12px; }
 
-  /* SKILL */
-  .skill-row { display: flex; gap: 6px; margin-bottom: 5px; font-size: 11.5px; line-height: 1.5; }
-  .skill-label { font-weight: 600; color: var(--navy); min-width: 130px; flex-shrink: 0; font-size: 11px; }
-  .skill-val { color: var(--ink2); font-weight: 300; }
+  /* EXPERIENCE */
+  .timeline { display: grid; gap: 14px; }
+  .exp { display: grid; grid-template-columns: 170px 1fr; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .exp .when { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--muted); padding-top: 3px; }
+  .exp h3 { font-size: 16.5px; color: var(--ink); font-weight: 700; }
+  .exp .org { font-size: 13.5px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+  .exp ul { list-style: none; display: grid; gap: 6px; }
+  .exp li { position: relative; padding-left: 18px; font-size: 14px; }
+  .exp li::before { content: ''; position: absolute; left: 2px; top: 10px; width: 6px; height: 6px; border-radius: 2px; background: var(--gold); }
+  .exp li b { color: var(--ink); font-weight: 600; }
 
-  /* EDUCATION */
-  .edu-school { font-weight: 600; font-size: 12.5px; color: var(--ink); }
-  .edu-meta { font-size: 12px; font-weight: 300; color: var(--ink2); margin-top: 3px; }
-  .edu-meta b { font-weight: 600; color: var(--navy); }
-  .edu-sub { font-size: 11.5px; color: var(--muted); margin-top: 2px; font-weight: 300; }
+  /* GRID INFO */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .panel h3 { font-size: 16px; color: var(--ink); font-weight: 700; margin-bottom: 4px; }
+  .panel .sub { font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+  .kv { display: grid; gap: 6px; font-size: 14px; }
+  .kv b { color: var(--ink); font-weight: 600; }
+  .skill-group + .skill-group { margin-top: 16px; }
+  .skill-group .label { font-size: 12px; font-weight: 700; color: var(--ink); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 8px; }
+  .plain-list { list-style: none; display: grid; gap: 10px; font-size: 14px; }
+  .plain-list b { color: var(--ink); font-weight: 600; }
+  .plain-list .d { color: var(--muted); font-size: 12.5px; }
+  .honors { display: flex; flex-wrap: wrap; gap: 8px; }
+  .honor { font-size: 13px; padding: 7px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); }
+  .honor.top { background: var(--gold-soft); border-color: color-mix(in srgb, var(--gold) 40%, var(--line)); color: var(--ink); font-weight: 600; }
 
-  /* CERT */
-  .cert { font-size: 12px; font-weight: 300; color: var(--ink2); margin-bottom: 5px; padding-left: 14px; position: relative; line-height: 1.5; }
-  .cert::before { content: '·'; position: absolute; left: 3px; color: var(--gold); font-size: 15px; line-height: 1.2; font-weight: 700; }
-  .cert strong { font-weight: 600; color: var(--navy); }
+  /* CONTACT */
+  .contact-box { background: var(--navy); border-radius: 20px; padding: 44px; color: #fff; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+  :root[data-theme="dark"] .contact-box { background: #17243a; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .contact-box { background: #17243a; } }
+  .contact-box h2 { color: #fff; }
+  .contact-box p { color: rgba(255,255,255,.75); margin-top: 10px; }
+  .contact-links { display: grid; gap: 10px; }
+  .contact-links a { display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-radius: 10px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); color: #fff; font-size: 14px; font-weight: 500; }
+  .contact-links a:hover { background: rgba(255,255,255,.14); text-decoration: none; }
+  .contact-links span { color: rgba(255,255,255,.6); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; overflow-wrap: anywhere; text-align: right; }
+  footer { text-align: center; padding: 28px 0 40px; font-size: 13px; color: var(--muted); }
 
-  /* LEADERSHIP */
-  .lead { font-size: 12px; font-weight: 300; color: var(--ink2); margin-bottom: 5px; padding-left: 14px; position: relative; line-height: 1.5; }
-  .lead::before { content: '·'; position: absolute; left: 3px; color: var(--gold); font-size: 15px; line-height: 1.2; font-weight: 700; }
-  .lead strong { font-weight: 600; color: var(--ink); }
-
-  /* HONORS */
-  .honors { display: flex; flex-wrap: wrap; gap: 6px; }
-  .honor { background: var(--tag); color: var(--navy); font-size: 11px; padding: 3px 9px; border-radius: 3px; border: 1px solid #d4dae6; }
-  .honor.gold { background: var(--gold-light); border-color: #d4a85a; color: #7a5200; font-weight: 600; }
-
-  /* FULL RULE */
-  .full-rule { border: none; border-top: 1px solid var(--rule); margin: 0 40px; }
-
-  @media print { body { background: white; } .page { margin: 0; box-shadow: none; max-width: 100%; } }
-  @media (max-width: 760px) { .body { grid-template-columns: 1fr; } .col:first-child { border-right: none; } .header, .summary-wrap { padding-left: 24px; padding-right: 24px; } .col { padding: 24px; } h1 { font-size: 32px; } .skill-row { flex-direction: column; gap: 0; } .job-top { flex-direction: column; } }
-  .proj-links { font-size: 11px; margin-bottom: 5px; } .proj-links a { color: var(--navy); text-decoration: underline; margin-right: 10px; }
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-grid, .card.feature, .two, .contact-box { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .projects { grid-template-columns: 1fr; }
+    .card.feature, .card.feature-wide { grid-column: span 1; }
+    .exp { grid-template-columns: 1fr; gap: 6px; }
+    .nav-links { display: none; }
+    h1 { font-size: 42px; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    .hero { padding-top: 44px; }
+    h1 { font-size: 36px; }
+    .contact-box { padding: 28px 22px; }
+    .contact-links a { flex-direction: column; }
+    .contact-links span { text-align: left; }
+  }
+  @media print {
+    nav, .theme-btn, .cta { display: none; }
+    body { background: #fff; }
+    section { padding: 24px 0; }
+    .card, .exp, .panel, .stat { box-shadow: none; break-inside: avoid; }
+  }
 </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <h1>Siddhi Prajapati</h1>
-    <div class="tagline">Software Engineer · AI Systems · Machine Learning · Backend · Full-Stack</div>
-    <div class="tagline" style="margin-top:2px;">University of California, Irvine &nbsp;|&nbsp; B.S. Computer Science, Specialization in Intelligent Systems, Minor in Statistics &nbsp;|&nbsp; Expected December 2027</div>
-    <div class="contact" style="margin-top:12px;">
-      <a href="mailto:siddhi2277@gmail.com">siddhi2277@gmail.com</a>
-      <span style="color:rgba(255,255,255,0.4)">·</span>
-      <a href="https://www.linkedin.com/in/siddhi-prajapati-127483268/">linkedin.com/in/siddhi-prajapati-127483268</a>
-      <span style="color:rgba(255,255,255,0.4)">·</span>
-      <a href="https://github.com/Sixxhi">github.com/Sixxhi</a>
-      <span style="color:rgba(255,255,255,0.4)">·</span>
-      <a href="https://sixxhi.github.io">sixxhi.github.io</a>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Siddhi<span>.</span></a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div style="margin-top:14px;">
-      <span style="background:#1e4a8a;border:1.5px solid #60a5fa;color:#bfdbfe;padding:6px 16px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:0.05em;display:inline-block;">
-        🟦 Available: Summer 2027 Internship (CPT) &nbsp;·&nbsp; Full-Time January 2028 (OPT) &nbsp;·&nbsp; Irvine, CA
-      </span>
+    <div class="nav-right">
+      <a class="btn sm primary" href="Siddhi_Prajapati_Resume_2027_FINAL.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
     </div>
   </div>
+</nav>
 
-  <!-- SUMMARY -->
-  <div class="summary-wrap">
-    <div class="summary">
-      UCI CS Senior (<b>GPA 3.663, Dean's Honor List ×4, Minor in Statistics</b>) building AI, backend and full-stack systems across research and industry.
-      <b>AWS Cloud Hacks 2026 AI Safety Track winner (GlassBoxAI)</b>, built <b>IMMUNE</b> with my team at the <b>UC Berkeley AI Hackathon 2026</b>, and <b>Team Lead for ZotStudy at ZotHacks 2026</b>.
-      Worked as an <b>AI Software Engineer at hyrAI</b> reducing false-positive flags on an AI voice and video interview platform, and as an undergraduate researcher at <b>UCI Calit2 SMART ITAC</b>. Currently a <b>Learning Assistant for ICS 31</b> at UCI. Technical writing on <b><a href="https://dev.to/siddhi_prajapati_6eb49986/immune-deterministic-memory-attribution-for-ai-agents-using-delta-debugging-lb2" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline;">dev.to</a></b>.
-      Experience across agentic AI systems, NLP pipelines, cloud infrastructure and database-backed applications.
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span>Open to Summer 2027 internships (CPT) · Full-time from Jan 2028 (OPT)</span>
+        <h1>Siddhi Prajapati</h1>
+        <div class="role">Software Engineer · AI Systems · Machine Learning · Backend · <span style="white-space:nowrap">Full-Stack</span></div>
+        <p class="lede">CS senior at UC Irvine building AI agent systems that are reliable, observable and testable, from agent memory integrity to real-time safety monitoring and production backend services.</p>
+        <div class="cta">
+          <a class="btn primary" href="Siddhi_Prajapati_Resume_2027_FINAL.pdf" target="_blank" rel="noopener">↓ Download Resume</a>
+          <a class="btn" href="https://github.com/Sixxhi" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/siddhi-prajapati-127483268/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:siddhi2277@gmail.com">Email</a>
+        </div>
+      </div>
+      <aside class="award-card">
+        <div class="k">🏆 Winner · AI Safety Track</div>
+        <h3>AWS Cloud Hacks 2026</h3>
+        <p>GlassBoxAI, a real-time AI agent observability platform. I owned the AWS Lambda and Amazon Bedrock backend and the Three.js frontend.</p>
+        <div class="meta-list">
+          <div><b>School</b> UC Irvine, B.S. Computer Science</div>
+          <div><b>Focus</b> Intelligent Systems · Statistics minor</div>
+          <div><b>GPA</b> 3.663 · Dean's Honor List ×4</div>
+          <div><b>Graduating</b> December 2027</div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">100%</div><div class="l">injected high-risk scenarios detected in testing (GlassBoxAI)</div></div>
+      <div class="stat"><div class="n">44</div><div class="l">automated tests across poisoning and staleness scenarios (IMMUNE)</div></div>
+      <div class="stat"><div class="n">300+</div><div class="l">labeled integrity violations used to cut false positives (hyrAI)</div></div>
+      <div class="stat"><div class="n">~91%</div><div class="l">accuracy on 10,000+ articles (NLP research)</div></div>
+      <div class="stat"><div class="n">30+</div><div class="l">students supported as an ICS 31 Learning Assistant</div></div>
     </div>
   </div>
+</header>
 
-  <!-- BODY -->
-  <div class="body">
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Selected work</div><h2>Projects</h2></div>
+    </div>
+    <div class="projects">
 
-    <!-- LEFT COLUMN -->
-    <div class="col">
-
-      <!-- EXPERIENCE -->
-      <div class="sec">
-        <div class="sec-title">Experience</div>
-
-        <!-- hyrAI -->
-        <div class="job">
-          <div class="job-top">
-            <span class="job-title">AI Software Engineer</span>
-            <span class="job-date">Aug 2026 – Sep 2026</span>
-          </div>
-          <div class="job-org">hyrAI / SkillJourney · Remote</div>
-          <ul class="bullets">
-            <li>Built a labeled dataset of <span class="metric">300+ flagged integrity violations</span> and used it to debug and reduce <b>false-positive flags</b> on an AI voice and video interview platform.</li>
-            <li>Ran <b>precision-recall analysis</b> and threshold tuning in Python to raise detection accuracy while preserving recall on real violations.</li>
+      <article class="card feature">
+        <div>
+          <div class="card-top"><span class="tag">AI Safety · Agents</span><span class="tag gold">Team project</span></div>
+          <h3>IMMUNE: Deterministic Memory Integrity for AI Agents</h3>
+          <div class="sub">UC Berkeley AI Hackathon 2026 · Jun 2026</div>
+          <ul>
+            <li>With my team, built a system addressing <b>OWASP ASI06 memory poisoning</b> that proves which stored memory caused an agent's wrong answer through <b>counterfactual replay and ddmin delta debugging</b>, with no LLM judge in the attribution loop.</li>
+            <li>Enforced quarantine at the <b>Redis KNN vector index level</b> (RediSearch FLAT, cosine), so poisoned memories cannot be retrieved again. Used adaptive group testing and ddmin to find the <b>minimal guilty memory set</b>.</li>
+            <li>Integrated <b>Arize Phoenix and OpenTelemetry</b> for full trace visibility, Sentry for incident reporting and a LangGraph BaseStore adapter for agent memory. Validated with 44 tests.</li>
           </ul>
-        </div>
-
-        <!-- ITAC -->
-        <div class="job">
-          <div class="job-top">
-            <span class="job-title">Undergraduate Research Assistant, VR & AI Systems</span>
-            <span class="job-date">Apr 2026 – Jun 2026</span>
+          <div class="chips"><span class="chip">Python</span><span class="chip">LangGraph</span><span class="chip">FastMCP</span><span class="chip">Redis RediSearch</span><span class="chip">Claude Haiku 4.5</span><span class="chip">Arize Phoenix</span><span class="chip">OpenTelemetry</span><span class="chip">Sentry</span></div>
+          <div class="links">
+            <a href="https://dev.to/siddhi_prajapati_6eb49986/immune-deterministic-memory-attribution-for-ai-agents-using-delta-debugging-lb2" target="_blank" rel="noopener">Write-up ↗</a>
+            <a href="https://github.com/Sixxhi/AI-Hackathon-20206" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://devpost.com/software/immunify-dnv043" target="_blank" rel="noopener">Devpost ↗</a>
           </div>
-          <div class="job-org">UCI Calit2 SMART ITAC, University of California, Irvine · Irvine, CA</div>
-          <ul class="bullets">
-            <li>Built <b>VR simulations</b> in SimInsights HyperSkill for building energy assessments and data center cooling efficiency, applying <b>ASHRAE</b> and <b>ISO</b> standards.</li>
-            <li>Developed <b>AI-agent reasoning workflows</b> on ITAC assessment data, ASHRAE guidelines, California building codes and ISO standards for contextual simulation feedback.</li>
-            <li>Built <b>backend pipelines</b> for agent evaluation, observability and simulation feedback.</li>
-          </ul>
         </div>
-
-        <!-- Fake News -->
-        <div class="job">
-          <div class="job-top">
-            <span class="job-title">Data Science Research Intern, Fake News Detection</span>
-            <span class="job-date">Jun 2025 – Jul 2025</span>
-          </div>
-          <div class="job-org">3E Worldwide / CHARUSAT · Remote</div>
-          <ul class="bullets">
-            <li>Built an end-to-end <b>NLP pipeline</b> in Python (TF-IDF, Logistic Regression, Decision Trees) reaching <span class="metric">~91% accuracy on 10,000+ articles</span>.</li>
-            <li>Validated results with F1, precision-recall, <b>ROC-AUC</b> and 5-fold cross-validation, identified a <b>data leakage</b> risk and documented the methodology.</li>
-          </ul>
+        <div>
+          <div class="callout"><div class="k">The hard part</div><p>Removing one memory at a time failed when the poison was redundant. Switching to ddmin found the minimal set of memories whose removal fixed the answer.</p></div>
+          <div class="callout"><div class="k">Validation</div><div class="big">44</div><p>tests across single-poison, redundant-poison and staleness scenarios.</p></div>
         </div>
+      </article>
 
-        <!-- BizzAppDev -->
-        <div class="job">
-          <div class="job-top">
-            <span class="job-title">Open-Source Development Intern</span>
-            <span class="job-date">Jul 2023 – Aug 2023</span>
-          </div>
-          <div class="job-org">BizzAppDev Systems Pvt. Ltd. · Remote</div>
-          <ul class="bullets">
-            <li>Contributed <b>backend modules</b> to an open-source <b>Python/XML</b> codebase on <b>PostgreSQL</b>, following modular design patterns and REST API conventions with a distributed team.</li>
-          </ul>
-        </div>
+      <article class="card">
+        <div class="card-top"><span class="tag gold">🏆 Winner, AI Safety Track</span></div>
+        <h3>GlassBoxAI: AI Agent Safety Observability</h3>
+        <div class="sub">AWS Cloud Hacks 2026 · Team of four · Apr 2026</div>
+        <ul>
+          <li>Real-time platform for a Smart Stadium Simulator, monitoring agent reasoning traces, safety scores and tool-call sequences, built in <b>24 hours</b>. Detected <b>100% of injected high-risk scenarios in testing</b> with zero false negatives.</li>
+          <li>Owned the <b>backend</b> (AWS Lambda, Bedrock pipelines, safety scoring) and the <b>frontend</b> (Three.js globe and stadium UI, dark-mode Figma design).</li>
+          <li>Caught a critical <b>Bedrock API parsing bug</b>: the code assumed flat JSON while Bedrock nests output inside a content array. Found it by testing Lambda functions against live endpoints before the demo.</li>
+        </ul>
+        <div class="chips"><span class="chip">AWS Lambda</span><span class="chip">Amazon Bedrock</span><span class="chip">Python</span><span class="chip">Three.js</span><span class="chip">Figma</span></div>
+      </article>
 
-        <!-- SUPROS -->
-        <div class="job">
-          <div class="job-top">
-            <span class="job-title">Software Development Intern</span>
-            <span class="job-date">Jun 2023 – Jul 2023</span>
-          </div>
-          <div class="job-org">SUPROS · Remote</div>
-          <ul class="bullets">
-            <li>Built and tested software modules for community-facing applications, applying debugging, iterative refactoring and modular design.</li>
-            <li>Translated feature requirements into engineering tasks and took part in code review cycles.</li>
-          </ul>
-        </div>
-      </div>
+      <article class="card">
+        <div class="card-top"><span class="tag">Full-Stack</span><span class="tag gold">Team Lead</span></div>
+        <h3>ZotStudy: UCI Study Session Finder</h3>
+        <div class="sub">ZotHacks 2026 · Oct 2026</div>
+        <ul>
+          <li>Led a first-time hackathon team to build a web app to <b>find, create and join UCI study sessions</b>.</li>
+          <li>Deployed on <b>Vercel</b> and helped teammates resolve errors, including Git merge conflicts.</li>
+        </ul>
+        <div class="chips"><span class="chip">React</span><span class="chip">Vite</span><span class="chip">Firebase Auth</span><span class="chip">Firestore</span><span class="chip">Vercel</span></div>
+      </article>
 
-      <hr class="full-rule">
+      <article class="card">
+        <div class="card-top"><span class="tag">Backend · DevOps</span></div>
+        <h3>CodeCraftHub: AI-Augmented Learning Platform</h3>
+        <div class="sub">IBM edX capstone · Mar 2026</div>
+        <ul>
+          <li>Designed <b>REST APIs</b> and backend services with Node.js, Express.js and MongoDB.</li>
+          <li>Containerized with <b>Docker</b> and automated <b>CI/CD</b> with GitHub Actions, using generative AI tooling across the full SDLC.</li>
+        </ul>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MongoDB</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span></div>
+      </article>
 
-      <!-- EDUCATION -->
-      <div class="sec" style="margin-top:20px;">
-        <div class="sec-title">Education</div>
-        <div class="edu-school">University of California, Irvine, Donald Bren School of ICS</div>
-        <div class="edu-meta">B.S. Computer Science, Specialization in Intelligent Systems &nbsp;|&nbsp; <b>GPA: 3.663 / 4.0</b> &nbsp;|&nbsp; Minor in Statistics &nbsp;|&nbsp; Sep 2024 – Dec 2027</div>
-        <div class="edu-sub" style="margin-top:4px;"><b>Dean's Honor List:</b> Fall 2024 · Winter 2025 · Winter 2026 · Spring 2026</div>
-        <div class="edu-sub">Coursework: Artificial Intelligence (A), Information Retrieval (A+), Design & Analysis of Algorithms, Data Structures (A-), Systems Programming C/C++, Linear Algebra (A+), Discrete Math (A), Statistics (A-). <b>Current:</b> Data Management, Probability in Computer Science, Machine Learning and Data Mining</div>
-      </div>
+      <article class="card">
+        <div class="card-top"><span class="tag">Systems</span></div>
+        <h3>Systems Projects in C++ and Python</h3>
+        <div class="sub">UC Irvine · 2025 to 2026</div>
+        <ul>
+          <li>Implemented ArrayList, LinkedList, circular queue, QueueStack and sorting algorithms in <b>C++</b>, tested with GoogleTest and CMake.</li>
+          <li>Built a <b>Grin language interpreter</b> with label resolution, branching and call-stack execution, a discrete-event alert propagation simulator, and a SQLite-backed airport database engine with a Tkinter GUI and parameterized CRUD.</li>
+        </ul>
+        <div class="chips"><span class="chip">C++</span><span class="chip">GoogleTest</span><span class="chip">CMake</span><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">Tkinter</span></div>
+      </article>
 
-      <hr class="full-rule">
+      <article class="card">
+        <div class="card-top"><span class="tag">Applied AI</span></div>
+        <h3>Forager: Sustainable AI Fashion Assistant</h3>
+        <div class="sub">IrvineHacks 2025</div>
+        <ul>
+          <li>Built a full-stack assistant using <b>Vertex AI vision models</b> to recommend second-hand items through the Depop API, deployed within 24 hours.</li>
+        </ul>
+        <div class="chips"><span class="chip">Vertex AI</span><span class="chip">Flask</span><span class="chip">React</span><span class="chip">Depop API</span></div>
+      </article>
 
-      <!-- CERTIFICATIONS -->
-      <div class="sec" style="margin-top:20px;">
-        <div class="sec-title">Certifications</div>
-        <div class="cert"><strong>CI/CD for Salesforce</strong>, DevOps Launchpad (official certification) · Jul 2026 · CI/CD automation, release pipelines.</div>
-        <div class="cert"><strong>AI Prompting for Everyone</strong>, DeepLearning.AI (Andrew Ng) · Jul 2026 · Prompt engineering, LLM capabilities.</div>
-        <div class="cert"><strong>Node.js Certification</strong>, Scaler Topics · May 2026 · 58 modules: Express.js, async JS, MongoDB/Mongoose, REST APIs with full CRUD.</div>
-        <div class="cert"><strong>IBM edX: Mastering Generative AI for Software Development</strong> · Mar 2026 · AI-assisted SDLC, Dockerfile generation.</div>
-        <div class="cert"><strong>Harvard CS50x</strong>, Introduction to Computer Science · HarvardX, verified · Jul 2025 · C, Python, SQL, JavaScript.</div>
-        <div class="cert"><strong>UX Design Fundamentals</strong>, Georgia Tech &nbsp;·&nbsp; <strong>OOP in Java</strong>, Georgia Tech / Coursera · Both verified.</div>
-      </div>
-
-      <hr class="full-rule">
-
-      <!-- LEADERSHIP -->
-      <div class="sec" style="margin-top:20px;">
-        <div class="sec-title">Leadership & Community</div>
-        <div class="lead"><strong>Learning Assistant, ICS 31: Intro to Programming &nbsp;|&nbsp; UC Irvine, Donald Bren School of ICS:</strong> Supporting 30+ students in introductory Python through office hours, concept explanations and code feedback. Completed UCI CLAP training. <span style="color:var(--muted);font-size:11px;">Sep 2026 – Present</span></div>
-        <div class="lead"><strong>Adobe Student Ambassador, Adobe:</strong> Promoting creative AI and design tools within UCI's CS community. <span style="color:var(--muted);font-size:11px;">Aug 2026 – Present</span></div>
-        <div class="lead"><strong>Team Lead, ZotHacks 2026:</strong> Led a first-time hackathon team to build and deploy ZotStudy. <span style="color:var(--muted);font-size:11px;">Oct 2026</span></div>
-        <div class="lead"><strong>Animal Care & Social Media Lead, UCI ACC:</strong> Grew the UCI ACC Instagram to <span class="metric">~15.3K average interactions</span> over 14 months through consistent visual content.</div>
-        <div class="lead"><strong>WICS & Data@UCI, Member/Mentee:</strong> Technical workshops, mentorship and software engineering professional development.</div>
-        <div class="lead"><strong>Volunteer Tutor, Angel Xpress Foundation:</strong> Weekly academic tutoring for underprivileged students.</div>
-      </div>
+      <article class="card">
+        <div class="card-top"><span class="tag">More builds</span></div>
+        <h3>Additional Technical Projects</h3>
+        <div class="sub">Personal and UC Irvine</div>
+        <ul>
+          <li>Built database-backed <b>Blood Bank</b> and <b>Library Automation</b> systems with SQL-driven record, inventory, user and transaction management.</li>
+          <li>Developed <b>DocTrack</b>, an Android utility app for document-expiration tracking and reminders.</li>
+          <li>Prototyped OpenCV edge detection, fitness and book review apps, a meal plan generator and UCI EngiTank.</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Android</span><span class="chip">OpenCV</span><span class="chip">Thunkable</span></div>
+      </article>
 
     </div>
+  </div>
+</section>
 
-    <!-- RIGHT COLUMN -->
-    <div class="col">
-
-      <!-- PROJECTS -->
-      <div class="sec">
-        <div class="sec-title">Projects</div>
-
-        <!-- ZotStudy -->
-        <div class="project">
-          <div class="proj-name">ZotStudy &nbsp;<span class="participant">· ZotHacks 2026 (Team Lead) · Oct 2026</span></div>
-          <div class="proj-tech">React · Vite · JavaScript · Firebase Authentication · Firestore · Vercel</div>
-          <ul class="bullets">
-            <li>Led a first-time hackathon team in building a web app to <b>find, create and join UCI study sessions</b>, deploying it on Vercel and helping teammates resolve errors, including Git merge conflicts.</li>
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Where I've worked</div><h2>Experience</h2></div></div>
+    <div class="timeline">
+      <div class="exp">
+        <div class="when">Aug – Sep 2026</div>
+        <div>
+          <h3>AI Software Engineer</h3>
+          <div class="org">hyrAI / SkillJourney · Remote</div>
+          <ul>
+            <li>Built a labeled dataset of <b>300+ flagged integrity violations</b> and used it to debug and reduce false-positive flags on an AI voice and video interview platform.</li>
+            <li>Ran <b>precision-recall analysis</b> and threshold tuning to raise detection accuracy while preserving recall on real violations.</li>
           </ul>
         </div>
-
-        <!-- IMMUNE -->
-        <div class="project">
-          <div class="proj-name">IMMUNE: AI Agent Memory Integrity System &nbsp;<span class="participant">· UC Berkeley AI Hackathon 2026 · Team project · Jun 2026</span></div>
-          <div class="proj-tech">Python · Redis RediSearch · Claude Haiku · LangGraph · FastMCP · Arize Phoenix · OpenTelemetry</div>
-          <div class="proj-links"><a href="https://github.com/Sixxhi/AI-Hackathon-20206" target="_blank" rel="noopener">GitHub</a><a href="https://devpost.com/software/immunify-dnv043" target="_blank" rel="noopener">Devpost</a><a href="https://dev.to/siddhi_prajapati_6eb49986/immune-deterministic-memory-attribution-for-ai-agents-using-delta-debugging-lb2" target="_blank" rel="noopener">Write-up</a></div>
-          <ul class="bullets">
-            <li>With my team, built a <b>deterministic AI agent memory integrity system</b> addressing OWASP ASI06 memory poisoning, proving guilty memories through counterfactual replay and ddmin delta debugging with no LLM judge in the attribution loop.</li>
-            <li>Enforced quarantine at the <b>Redis KNN vector index level</b> (RediSearch FLAT, cosine), so poisoned memories cannot be retrieved, and used adaptive group testing to find the minimal guilty memory set.</li>
-            <li>Integrated <b>Arize Phoenix and OpenTelemetry</b> for trace visibility, with <span class="metric">44 tests</span> across single-poison, redundant-poison and staleness scenarios.</li>
-          </ul>
-        </div>
-
-        <!-- GlassBoxAI -->
-        <div class="project">
-          <div class="proj-name">GlassBoxAI: Agentic AI Safety Observability Platform &nbsp;<span class="award">· 🏆 Winner, AI Safety Track, AWS Cloud Hacks 2026 · Apr 2026</span></div>
-          <div class="proj-tech">AWS Lambda · Amazon Bedrock · Three.js · Figma · Python · JavaScript · GitHub Actions</div>
-          <ul class="bullets">
-            <li>Built a real-time AI safety observability platform for a Smart Stadium Simulator <b>in 24 hours</b> with a team of four. It monitored agent reasoning traces, safety scores and tool-call sequences, and <span class="metric">detected 100% of injected high-risk scenarios in testing</span> with zero false negatives.</li>
-            <li>Owned the full <b>backend</b> (AWS Lambda, Bedrock pipelines, safety scoring) and <b>frontend</b> (Three.js globe and stadium UI, dark-mode Figma design), and set up a GitHub Actions CI pipeline with automated tests on every push.</li>
-            <li>Caught a critical <b>Bedrock API parsing bug</b> by testing Lambda functions against live endpoints before the demo, preventing a silent failure during judging.</li>
-          </ul>
-        </div>
-
-        <!-- CodeCraftHub -->
-        <div class="project">
-          <div class="proj-name">CodeCraftHub: AI-Augmented Developer Learning Platform &nbsp;<span class="participant">· IBM edX capstone · Mar 2026</span></div>
-          <div class="proj-tech">Node.js · Express.js · MongoDB · Docker · Generative AI · GitHub Actions</div>
-          <ul class="bullets">
-            <li>Designed <b>REST APIs</b> and backend services using Node.js, Express.js and MongoDB for a developer learning platform with AI features.</li>
-            <li>Containerized the application with <b>Docker</b> and automated <b>CI/CD</b> using GitHub Actions and version control workflows.</li>
-          </ul>
-        </div>
-
-        <!-- DSA Labs -->
-        <div class="project">
-          <div class="proj-name">Data Structures & Algorithms Labs (C++) &nbsp;<span class="participant">· UC Irvine · Mar 2026</span></div>
-          <div class="proj-tech">C++ · GoogleTest · CMake</div>
-          <ul class="bullets">
-            <li>Implemented ArrayList, LinkedList, circular queue, QueueStack and sorting algorithms in <b>C++</b> with OOP, tested with GoogleTest and CMake.</li>
-          </ul>
-        </div>
-
-        <!-- Python Systems -->
-        <div class="project">
-          <div class="proj-name">Python Systems Projects &nbsp;<span class="participant">· UC Irvine · Jun 2025</span></div>
-          <div class="proj-tech">Python · SQLite · Tkinter · Event-Driven Architecture</div>
-          <ul class="bullets">
-            <li>Built a discrete-event alert propagation simulator, a SQLite-backed airport database engine with a Tkinter GUI and parameterized CRUD, and a Grin language interpreter with label resolution, branching and call-stack execution.</li>
-          </ul>
-        </div>
-
-        <!-- Forager -->
-        <div class="project">
-          <div class="proj-name">Forager: Sustainable AI Fashion Assistant &nbsp;<span class="participant">· IrvineHacks 2025</span></div>
-          <div class="proj-tech">Vertex AI · Flask · React · Depop API</div>
-          <ul class="bullets">
-            <li>Built a full-stack AI fashion assistant using <b>Vertex AI vision models</b> to recommend second-hand alternatives through the Depop API, and deployed it within 24 hours.</li>
-          </ul>
-        </div>
-
       </div>
-
-      <hr class="full-rule">
-
-      <!-- TECHNICAL SKILLS -->
-      <div class="sec" style="margin-top:20px;">
-        <div class="sec-title">Technical Skills</div>
-        <div class="skill-row"><span class="skill-label">Languages</span><span class="skill-val">Python, Java, C, C++, SQL (PostgreSQL), JavaScript, HTML/CSS, R</span></div>
-        <div class="skill-row"><span class="skill-label">Concepts</span><span class="skill-val">Object-Oriented Programming, Data Structures, Algorithms, Unit Testing</span></div>
-        <div class="skill-row"><span class="skill-label">Frameworks & Backend</span><span class="skill-val">Node.js, Express.js, Flask, React, REST APIs, MongoDB, PostgreSQL, SQLite, Redis, Firebase</span></div>
-        <div class="skill-row"><span class="skill-label">AI / ML</span><span class="skill-val">Machine Learning, LLMs, NLP, AI Agents, Vector Search, scikit-learn, NumPy, Pandas, Matplotlib, TF-IDF, ROC-AUC, Logistic Regression, Decision Trees, Cross-Validation, Precision-Recall, LangGraph, FastMCP, Redis RediSearch, Arize Phoenix</span></div>
-        <div class="skill-row"><span class="skill-label">Cloud, DevOps & Tools</span><span class="skill-val">AWS Lambda, Amazon Bedrock, Claude API, Vertex AI, CI/CD, Docker, GitHub Actions, OpenTelemetry, Git, GitHub, GoogleTest, CMake</span></div>
-        <div class="skill-row"><span class="skill-label">Design & Other</span><span class="skill-val">Figma, Three.js, VS Code</span></div>
+      <div class="exp">
+        <div class="when">Apr – Jun 2026</div>
+        <div>
+          <h3>Undergraduate Research Assistant</h3>
+          <div class="org">UCI Calit2 SMART ITAC · Irvine, CA</div>
+          <ul>
+            <li>Developed <b>AI-agent reasoning workflows</b> on ITAC assessment data and built <b>backend pipelines</b> for agent evaluation, observability and simulation feedback.</li>
+            <li>Built VR simulations in SimInsights HyperSkill for building energy assessments and data center cooling efficiency, with end-to-end scenario flows covering mechanical equipment, sensor systems and operational procedures.</li>
+            <li>Grounded agent feedback in ASHRAE guidelines, California building codes and ISO standards.</li>
+          </ul>
+        </div>
       </div>
+      <div class="exp">
+        <div class="when">Aug 2025</div>
+        <div>
+          <h3>Summer Programming Intern, C, C++ and Java</h3>
+          <div class="org">dg8ly, The School of Digital Mastery · Remote</div>
+          <ul>
+            <li>Built <b>Student Records, Bank Management and Library Management</b> systems in C/C++ and Java, applying OOP, file handling and modular design.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp">
+        <div class="when">Jun – Jul 2025</div>
+        <div>
+          <h3>Data Science Research Intern, Fake News Detection</h3>
+          <div class="org">3E Worldwide / CHARUSAT · Remote</div>
+          <ul>
+            <li>Built an end-to-end <b>NLP pipeline</b> in Python (TF-IDF, Logistic Regression, Decision Trees) reaching <b>~91% accuracy on 10,000+ articles</b>.</li>
+            <li>Validated with F1, precision-recall, ROC-AUC and stratified 5-fold cross-validation, and flagged a <b>data leakage</b> risk in the original train/test split that had inflated accuracy.</li>
+            <li>Documented methodology, experiments and model comparisons in a research-style paper.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp">
+        <div class="when">Jul – Aug 2023</div>
+        <div>
+          <h3>Open-Source Development Intern</h3>
+          <div class="org">BizzAppDev Systems · Remote</div>
+          <ul>
+            <li>Contributed <b>backend modules</b> to an open-source Python/XML codebase on PostgreSQL, following modular design patterns and REST API conventions, and strengthened backend data-handling workflows.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp">
+        <div class="when">Jun – Jul 2023</div>
+        <div>
+          <h3>Software Development Intern</h3>
+          <div class="org">SUPROS · Remote · Mentored by an ex-Microsoft / PayPal engineer</div>
+          <ul>
+            <li>Built and tested software modules for community-facing applications, applying test-driven debugging, iterative refactoring and modular design.</li>
+            <li>Translated feature requirements into modular tasks, took part in review cycles and shipped maintainable, well-tested code.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp">
+        <div class="when">Jul 2023</div>
+        <div>
+          <h3>Technology & Data Analytics Intern</h3>
+          <div class="org">cult.fit / Samsonite Projects · Remote</div>
+          <ul>
+            <li>Prototyped a mobile wellness app in Thunkable with onboarding, goal tracking and accessibility-first UX.</li>
+            <li>Built <b>Google Data Studio dashboards</b> with dynamic segmentation to surface business trends.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <hr class="full-rule">
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Background</div><h2>Education & Leadership</h2></div></div>
+    <div class="two">
+      <div class="panel">
+        <h3>University of California, Irvine</h3>
+        <div class="sub">B.S. Computer Science, Intelligent Systems · Minor in Statistics · Sep 2024 to Dec 2027</div>
+        <div class="kv">
+          <div><b>GPA:</b> 3.663 / 4.0</div>
+          <div><b>Dean's Honor List:</b> Fall 2024, Winter 2025, Winter 2026, Spring 2026</div>
+          <div><b>Coursework:</b> Artificial Intelligence (A), Information Retrieval (A+), Design & Analysis of Algorithms, Data Structures (A-), Systems Programming C/C++, Linear Algebra (A+), Discrete Math (A), Statistics (A-)</div>
+          <div><b>Current:</b> Data Management, Probability in CS, Machine Learning and Data Mining</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Leadership & Community</h3>
+        <ul class="plain-list" style="margin-top:8px;">
+          <li><b>Learning Assistant, ICS 31</b> · Supporting 30+ students in intro Python through office hours, concept help and code feedback. Completed UCI CLAP training. <span class="d">Sep 2026 to present</span></li>
+          <li><b>Adobe Student Ambassador</b> · Promoting creative AI and design tools in UCI's CS community. <span class="d">Aug 2026 to present</span></li>
+          <li><b>Team Lead, ZotHacks 2026</b> · Led a first-time team to ship ZotStudy.</li>
+          <li><b>Animal Care & Social Media Lead, UCI ACC</b> · Grew Instagram to ~15.3K average interactions over 14 months.</li>
+          <li><b>WICS & Data@UCI</b> · Member and mentee in technical workshops and mentorship programs.</li>
+          <li><b>Volunteer Tutor, Angel Xpress Foundation</b> · Weekly academic tutoring for underprivileged students.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- HONORS -->
-      <div class="sec" style="margin-top:20px;">
-        <div class="sec-title">Honors & Awards</div>
-        <div class="honors">
-          <span class="honor gold">🏆 Winner, AI Safety Track · AWS Cloud Hacks 2026</span>
-          <span class="honor">Dean's Honor List ×4 · UC Irvine</span>
-          <span class="honor">UC Berkeley AI Hackathon 2026 · IMMUNE</span>
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Toolkit</div><h2>Skills & Certifications</h2></div></div>
+    <div class="two">
+      <div class="panel">
+        <div class="skill-group"><div class="label">Languages</div><div class="chips" style="margin-top:0"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">C</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">HTML/CSS</span><span class="chip">R</span></div></div>
+        <div class="skill-group"><div class="label">Concepts</div><div class="chips" style="margin-top:0"><span class="chip">OOP</span><span class="chip">Data Structures</span><span class="chip">Algorithms</span><span class="chip">REST API Design</span><span class="chip">Testing</span></div></div>
+        <div class="skill-group"><div class="label">AI / ML</div><div class="chips" style="margin-top:0"><span class="chip">LLMs</span><span class="chip">AI Agents</span><span class="chip">LangGraph</span><span class="chip">FastMCP</span><span class="chip">Vector Search</span><span class="chip">NLP</span><span class="chip">scikit-learn</span><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">OpenCV</span><span class="chip">TF-IDF</span><span class="chip">Cross-Validation</span><span class="chip">Precision-Recall</span><span class="chip">Redis RediSearch</span><span class="chip">Arize Phoenix</span></div></div>
+        <div class="skill-group"><div class="label">Backend & Data</div><div class="chips" style="margin-top:0"><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">Flask</span><span class="chip">React</span><span class="chip">REST APIs</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">SQLite</span><span class="chip">Redis</span><span class="chip">Firebase</span></div></div>
+        <div class="skill-group"><div class="label">Cloud & DevOps</div><div class="chips" style="margin-top:0"><span class="chip">AWS Lambda</span><span class="chip">Amazon Bedrock</span><span class="chip">Claude API</span><span class="chip">Vertex AI</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">OpenTelemetry</span><span class="chip">IBM Watson Studio</span><span class="chip">Sentry</span><span class="chip">Git</span><span class="chip">GoogleTest</span><span class="chip">CMake</span><span class="chip">Three.js</span><span class="chip">Figma</span><span class="chip">Cursor</span><span class="chip">GitHub Copilot</span></div></div>
+        <div class="skill-group"><div class="label">Familiarity</div><div class="chips" style="margin-top:0"><span class="chip">GitLab CI/CD</span><span class="chip">Jenkins</span><span class="chip">Snyk</span><span class="chip">Dynatrace</span></div></div>
+      </div>
+      <div class="panel">
+        <h3>Certifications</h3>
+        <ul class="plain-list" style="margin-top:10px;">
+          <li><b>CI/CD for Salesforce</b> · DevOps Launchpad, official certification. Release pipelines and continuous delivery. <span class="d">Jul 2026</span></li>
+          <li><b>AI Prompting for Everyone</b> · DeepLearning.AI <span class="d">Jul 2026</span></li>
+          <li><b>Node.js Certification</b> · Scaler Topics. 58 modules: Express.js, async JS, MongoDB/Mongoose, REST APIs with full CRUD. <span class="d">May 2026</span></li>
+          <li><b>Mastering Generative AI for Software Development</b> · IBM edX. AI-assisted SDLC, applied in CodeCraftHub. <span class="d">Mar 2026</span></li>
+          <li><b>Harvard CS50x</b> · HarvardX, verified. C, Python, SQL, JavaScript. <span class="d">Jul 2025</span></li>
+          <li><b>UX Design Fundamentals</b> and <b>OOP in Java</b> · Georgia Tech, both verified</li>
+        </ul>
+        <h3 style="margin-top:22px;">Honors</h3>
+        <div class="honors" style="margin-top:10px;">
+          <span class="honor top">🏆 Winner, AI Safety Track · AWS Cloud Hacks 2026</span>
+          <span class="honor">Dean's Honor List ×4</span>
+          <span class="honor">UC Berkeley AI Hackathon 2026 · Built IMMUNE</span>
           <span class="honor">Certificate of Merit · 17th Sheikh Zayed Memorial Education Award</span>
           <span class="honor">Mathematics Perfect Score · CBSE UAE Sahodaya</span>
           <span class="honor">Top 5 · Emirates Aviation Water Rocket Competition</span>
           <span class="honor">Guinness World Record Contributor · Largest Water Safety Lesson, DCT Abu Dhabi</span>
         </div>
       </div>
-
     </div>
   </div>
+</section>
 
-</div>
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <div>
+        <div class="eyebrow" style="color:#e2b25a;">Let's talk</div>
+        <h2>Open to Summer 2027 internships and full-time roles from January 2028.</h2>
+        <p>Software engineering, AI/ML and backend roles. Based in Irvine, CA, and happy to relocate.</p>
+        <div class="cta">
+          <a class="btn" href="Siddhi_Prajapati_Resume_2027_FINAL.pdf" target="_blank" rel="noopener">↓ Download Resume</a>
+        </div>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:siddhi2277@gmail.com">Email <span>siddhi2277@gmail.com</span></a>
+        <a href="https://www.linkedin.com/in/siddhi-prajapati-127483268/" target="_blank" rel="noopener">LinkedIn <span>siddhi-prajapati-127483268</span></a>
+        <a href="https://github.com/Sixxhi" target="_blank" rel="noopener">GitHub <span>github.com/Sixxhi</span></a>
+        <a href="https://dev.to/siddhi_prajapati_6eb49986/immune-deterministic-memory-attribution-for-ai-agents-using-delta-debugging-lb2" target="_blank" rel="noopener">Blog <span>dev.to</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Siddhi Prajapati · Built with care in Irvine, CA</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('themeBtn');
+    var root = document.documentElement;
+    try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+    btn.addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') === 'dark' ||
+        (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var next = dark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>
 </body>
 </html>
